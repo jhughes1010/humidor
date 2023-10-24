@@ -20,10 +20,10 @@ CRGB leds[NUM_LEDS];
 void setup() {
   // LEDs
   Serial.begin(115200);
-  Serial.println("resetting");
+  Serial.println("Cigar Humidor Controller");
   FastLED.addLeds<WS2812, DATA_PIN, RGB>(leds, NUM_LEDS);
   FastLED.setBrightness(32);
-  // limit my draw to 1A at 5v of power draw
+  // set max power target for LEDs
   FastLED.setMaxPowerInVoltsAndMilliamps(5, 500);
   //set up fans
   pinMode(INTAKE, OUTPUT);
